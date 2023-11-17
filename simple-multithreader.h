@@ -67,6 +67,10 @@ void parallel_for(int low, int high, std::function<void(int)> &&lambda, int numT
   int NTHREADS = numThreads;
   NTHREADS--;
   // since main thread is counted in numThreads, numThreads -1 are the number of threads that are needed to be created
+  if(NTHREADS==0) {
+    printf("Not enough threads\n");
+    exit(EXIT_FAILURE);
+  }
   thread_args args[NTHREADS];
   int SIZE = high - low;
   pthread_t tid[NTHREADS];
@@ -98,6 +102,10 @@ void parallel_for(int low1, int high1, int low2, int high2, std::function<void(i
   int NTHREADS = numThreads;
   NTHREADS--;
   // since main thread is counted in numThreads, numThreads -1 are the number of threads that are needed to be created
+  if(NTHREADS==0) {
+    printf("Not enough threads\n");
+    exit(EXIT_FAILURE);
+  }
   thread_args_2 args[NTHREADS];
   int SIZE1 = high1 - low1;
   pthread_t tid[NTHREADS];
