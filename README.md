@@ -2,6 +2,8 @@
 
 ******************************************************** ASSIGNMENT-5 **************************************************************
 
+Link of the github repo: https://github.com/Singh-Himanshu-cpp/OS-assignment-5.git 
+
 In this assignment we have implemented some essential programming efforts that are required when we want to use pthreads.
 We have created this abstraction in the header file simple-multithreader.h .Whenever the user wants to use pthreads, they can 
 reduce their work by including this header file, and by calling the following 2 functions:
